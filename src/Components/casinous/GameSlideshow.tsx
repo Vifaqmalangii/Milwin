@@ -5,17 +5,17 @@ import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const slides = [
-  { src: "/game images/Milwin Game Lobby.webp", label: "Game Lobby" },
-  { src: "/game images/Milwin Game Hot Games.webp", label: "Hot Games" },
-  { src: "/game images/Milwin Game Slots.webp", label: "Slots" },
-  { src: "/game images/Milwin Game Mini Games.webp", label: "Mini Games" },
-  { src: "/game images/Milwin Game Promotion.webp", label: "Promotions" },
-  { src: "/game images/Milwin Game Missions.webp", label: "Missions" },
-  { src: "/game images/Milwin Game VIP.webp", label: "VIP" },
-  { src: "/game images/Milwin Game Rebate.webp", label: "Rebate" },
-  { src: "/game images/Milwin Game Invite.webp", label: "Invite Friends" },
-  { src: "/game images/Milwin Game Registration.webp", label: "Registration" },
-  { src: "/game images/Milwin Game Support.webp", label: "Support" },
+  { src: "/game-images/Milwin-Game-Lobby.webp", label: "Game Lobby" },
+  { src: "/game-images/Milwin-Game-Hot-Games.webp", label: "Hot Games" },
+  { src: "/game-images/Milwin-Game-Slots.webp", label: "Slots" },
+  { src: "/game-images/Milwin-Game-Mini-Games.webp", label: "Mini Games" },
+  { src: "/game-images/Milwin-Game-Promotion.webp", label: "Promotions" },
+  { src: "/game-images/Milwin-Game-Missions.webp", label: "Missions" },
+  { src: "/game-images/Milwin-Game-VIP.webp", label: "VIP" },
+  { src: "/game-images/Milwin-Game-Rebate.webp", label: "Rebate" },
+  { src: "/game-images/Milwin-Game-Invite.webp", label: "Invite Friends" },
+  { src: "/game-images/Milwin-Game-Registration.webp", label: "Registration" },
+  { src: "/game-images/Milwin-Game-Support.webp", label: "Support" },
 ];
 
 export default function GameSlideshow() {
