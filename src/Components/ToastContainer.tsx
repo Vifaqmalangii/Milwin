@@ -1,0 +1,20 @@
+"use client";
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+export default function ToastContainers() {
+  return (
+    <ToastContainer
+      position="top-center"
+      autoClose={3000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      limit={1}
+      pauseOnHover
+    />
+  );
+}
