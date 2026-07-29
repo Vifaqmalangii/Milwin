@@ -1,10 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { type GameDetails } from "./GameModal";
-import GameSlideshow from "./GameSlideshow";
 import { FaGamepad, FaRocket, FaDesktop, FaBolt, FaCoins, FaCheckCircle } from "react-icons/fa";
+
+const GameSlideshow = dynamic(() => import("./GameSlideshow"), {
+  ssr: false,
+  loading: () => <div className="h-[440px] rounded-2xl border border-amber-500/20 bg-[#0d121d]" />,
+});
 
 const gamesData: GameDetails[] = [
   {
@@ -221,8 +226,11 @@ export default function GamesSection() {
                 <Image
                   src={game.image}
                   alt={`${game.title} - Play ${game.title} game on Milwin and earn real cash with betting limits from ${game.investLimit}`}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  width={400}
+                  height={300}
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                  quality={80}
+                  className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#131927] via-transparent to-transparent opacity-80"></div>
                 <span className="absolute top-2 right-2 px-2 py-0.5 rounded bg-black/70 backdrop-blur-md text-[9px] font-bold text-amber-400 border border-amber-500/30 uppercase">

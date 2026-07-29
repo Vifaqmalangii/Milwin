@@ -51,7 +51,7 @@ export default function TopWinnersInvestors() {
                 >
                   <div className="flex items-center gap-3">
                     <div className="relative w-9 h-9 rounded-lg overflow-hidden border border-amber-500/30">
-                      <Image src={winner.avatar} alt={winner.name} fill className="object-cover" />
+                      <Image src={winner.avatar} alt={winner.name} width={64} height={64} sizes="64px" quality={75} className="h-full w-full object-cover" />
                     </div>
                     <div>
                       <h4 className="text-xs font-bold text-white">{winner.name}</h4>
@@ -108,7 +108,7 @@ export default function TopWinnersInvestors() {
                 >
                   <div className="flex items-center gap-3">
                     <div className="relative w-9 h-9 rounded-lg overflow-hidden border border-cyan-500/30">
-                      <Image src={investor.avatar} alt={investor.name} fill className="object-cover" />
+                      <Image src={investor.avatar} alt={investor.name} width={64} height={64} sizes="64px" quality={75} className="h-full w-full object-cover" />
                     </div>
                     <div>
                       <h4 className="text-xs font-bold text-white">{investor.name}</h4>

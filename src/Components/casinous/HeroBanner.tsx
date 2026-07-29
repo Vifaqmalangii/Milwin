@@ -44,11 +44,14 @@ export default function HeroBanner({ onOpenAuth }: HeroBannerProps) {
               <Image
                 src="/images/hero_banner.webp"
                 alt="Milwin Game APK Android app with online casino games - Teen Patti, Slots, Roulette and instant withdrawals to JazzCash EasyPaisa"
-                fill
+                width={1200}
+                height={1200}
                 priority
                 fetchPriority="high"
                 loading="eager"
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={80}
+                className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d14] via-transparent to-transparent"></div>
             </div>

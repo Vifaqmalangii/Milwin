@@ -14,8 +14,11 @@ export default function AboutSection() {
               <Image
                 src="/images/card.webp"
                 alt="Milwin Game cards gameplay - Pakistani online casino platform for earning real money through Teen Patti and card games"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
+                width={1024}
+                height={1024}
+                sizes="(max-width: 1024px) 100vw, 560px"
+                quality={80}
+                className="h-full w-full object-cover hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0d121d] via-transparent to-transparent"></div>
             </div>

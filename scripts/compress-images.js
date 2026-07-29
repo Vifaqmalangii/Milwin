@@ -7,6 +7,8 @@ const directories = [
   { input: 'public/game-images', output: 'public/game-images' },
 ];
 
+const supportedExtensions = ['.png', '.jpg', '.jpeg', '.webp'];
+
 async function compressImages() {
   for (const dir of directories) {
     if (!fs.existsSync(dir.input)) {
@@ -16,24 +18,29 @@ async function compressImages() {
 
     const files = fs.readdirSync(dir.input).filter(f => {
       const ext = path.extname(f).toLowerCase();
-      return ['.png', '.jpg', '.jpeg'].includes(ext);
+      return supportedExtensions.includes(ext);
     });
 
     console.log(`\n📸 Compressing images in ${dir.input}...`);
 
     for (const file of files) {
       const inputPath = path.join(dir.input, file);
-      const outputName = path.basename(file, path.extname(file)) + '.webp';
-      const outputPath = path.join(dir.output, outputName);
+      const ext = path.extname(file).toLowerCase();
+      const inputIsWebp = ext === '.webp';
+      const outputPath = inputIsWebp
+        ? path.join(dir.output, path.basename(file, ext) + '-optimized.webp')
+        : path.join(dir.output, path.basename(file, ext) + '.webp');
 
       try {
         const stats = fs.statSync(inputPath);
         const originalSize = (stats.size / 1024).toFixed(2);
 
+        const targetWidth = dir.input.includes('game-images') ? 720 : 1200;
+
         // Compress and convert to WebP
         await sharp(inputPath)
-          .resize(2048, 2048, { fit: 'inside', withoutEnlargement: true })
-          .webp({ quality: 80 })
+          .resize(targetWidth, targetWidth, { fit: 'inside', withoutEnlargement: true })
+          .webp({ quality: 70, effort: 6 })
           .toFile(outputPath);
 
         const newStats = fs.statSync(outputPath);
@@ -43,9 +50,13 @@ async function compressImages() {
         console.log(`✅ ${file}`);
         console.log(`   ${originalSize}KB → ${newSize}KB (${reduction}% reduction)`);
 
-        // Delete original PNG/JPG
-        if (inputPath !== outputPath) {
+        // Replace original PNG/JPG or swap in optimized WebP
+        if (!inputIsWebp && inputPath !== outputPath) {
           fs.unlinkSync(inputPath);
+        }
+        if (inputIsWebp && fs.existsSync(inputPath)) {
+          fs.unlinkSync(inputPath);
+          fs.renameSync(outputPath, inputPath);
         }
       } catch (error) {
         console.error(`❌ Error compressing ${file}:`, error.message);

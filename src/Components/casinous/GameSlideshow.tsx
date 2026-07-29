@@ -59,14 +59,16 @@ export default function GameSlideshow() {
         <Image
           src={slides[current].src}
           alt={slides[current].label}
-          fill
-          className={`object-contain bg-white transition-all duration-300 ${animating
+          width={360}
+          height={640}
+          sizes="(max-width: 640px) 100vw, 360px"
+          quality={80}
+          className={`h-full w-full object-contain bg-white transition-all duration-300 ${animating
               ? direction === "right"
                 ? "opacity-0 translate-x-4"
                 : "opacity-0 -translate-x-4"
               : "opacity-100 translate-x-0"
             }`}
-          priority
         />
 
         {/* Gradient overlay bottom */}
@@ -134,8 +136,11 @@ export default function GameSlideshow() {
             <Image
               src={slide.src}
               alt={slide.label}
-              fill
-              className="object-contain bg-white"
+              width={80}
+              height={56}
+              sizes="80px"
+              quality={70}
+              className="h-full w-full object-contain bg-white"
             />
           </button>
         ))}
