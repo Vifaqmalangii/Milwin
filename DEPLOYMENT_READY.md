@@ -9,7 +9,7 @@ Your Milwin Game project is now fully prepared for Netlify deployment!
 1. **netlify.toml** ✓
    - Netlify build configuration
    - Build command: `npm run build`
-   - Publish directory: `.next`
+   - Publish directory: `out`
    - Security headers configured
    - Redirect rules configured
 

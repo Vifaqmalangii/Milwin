@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 export async function GET() {
   const baseUrl = 'https://milwin.com';
   const lastModified = new Date().toISOString();

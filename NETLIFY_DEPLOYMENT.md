@@ -40,7 +40,7 @@ NEXT_PUBLIC_APP_URL=<your-production-domain>
 
 #### 3. Build Settings (already configured in netlify.toml)
 - **Build command:** `npm run build`
-- **Publish directory:** `.next`
+- **Publish directory:** `out`
 
 ### Important Notes
 
