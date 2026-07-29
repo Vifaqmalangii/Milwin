@@ -21,7 +21,7 @@ export default function RegisterPage() {
     <main className="min-h-screen bg-[#0a0d14] text-white">
       <ToastContainers />
       <Navbar onOpenAuth={handleOpenAuth} />
-      
+
       <Breadcrumb />
 
       <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">

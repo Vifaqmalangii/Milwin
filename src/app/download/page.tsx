@@ -9,8 +9,6 @@ import Breadcrumb from "@/Components/Breadcrumb";
 import { useState } from "react";
 import {
   FaAndroid,
-  FaApple,
-  FaQrcode,
   FaDownload,
   FaCheckCircle,
   FaShieldAlt,
@@ -24,7 +22,7 @@ import { toast } from "react-toastify";
 export default function DownloadPage() {
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [authMode, setAuthMode] = useState<"signin" | "signup">("signin");
-  const [activeTab, setActiveTab] = useState<"android" | "ios" | "qr">("android");
+  const [activeTab, setActiveTab] = useState<"android">("android");
   const [isDownloading, setIsDownloading] = useState(false);
 
   const handleOpenAuth = (mode: "signin" | "signup") => {
@@ -79,26 +77,6 @@ export default function DownloadPage() {
           >
             <FaAndroid className="text-lg" /> Android APK
           </button>
-          <button
-            onClick={() => setActiveTab("ios")}
-            className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm sm:text-base transition-all ${
-              activeTab === "ios"
-                ? "bg-gradient-to-r from-amber-500 to-amber-600 text-black shadow-lg shadow-amber-500/20"
-                : "text-slate-400 hover:text-white"
-            }`}
-          >
-            <FaApple className="text-lg" /> iOS / Web App
-          </button>
-          <button
-            onClick={() => setActiveTab("qr")}
-            className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm sm:text-base transition-all ${
-              activeTab === "qr"
-                ? "bg-gradient-to-r from-amber-500 to-amber-600 text-black shadow-lg shadow-amber-500/20"
-                : "text-slate-400 hover:text-white"
-            }`}
-          >
-            <FaQrcode className="text-lg" /> QR Code
-          </button>
         </div>
 
         {/* Tab Content */}
@@ -121,14 +99,15 @@ export default function DownloadPage() {
                 </div>
               </div>
 
-              <button
-                onClick={handleDownloadApk}
-                disabled={isDownloading}
+              <a
+                href="https://milapp.win/?dl=4kz455"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-black font-extrabold rounded-2xl shadow-xl shadow-amber-500/25 uppercase tracking-wider text-base flex items-center justify-center gap-2 transform active:scale-95 transition-all shrink-0"
               >
-                <FaDownload className={isDownloading ? "animate-bounce" : ""} />
-                {isDownloading ? "Downloading..." : "Download APK Now"}
-              </button>
+                <FaDownload />
+                Download APK Now
+              </a>
             </div>
 
             {/* Setup Steps */}
@@ -167,52 +146,6 @@ export default function DownloadPage() {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-        )}
-
-        {activeTab === "ios" && (
-          <div className="bg-[#111622] border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
-            <div className="flex items-center gap-4 text-amber-400">
-              <FaApple className="text-4xl" />
-              <div>
-                <h2 className="text-xl font-bold text-white">Milwin iOS Instant Web App</h2>
-                <p className="text-xs sm:text-sm text-slate-400">Add directly to your iPhone or iPad Home Screen.</p>
-              </div>
-            </div>
-
-            <p className="text-sm text-slate-300 leading-relaxed">
-              Enjoy the full Milwin experience on iOS without needing third-party App Store profiles:
-            </p>
-
-            <ol className="list-decimal list-inside space-y-3 text-sm text-slate-300 bg-[#0a0d14] p-5 rounded-2xl border border-slate-800">
-              <li>Open Safari browser on your iPhone or iPad.</li>
-              <li>Visit <strong>milwin.com</strong>.</li>
-              <li>Tap the <strong>Share</strong> icon at the bottom of Safari.</li>
-              <li>Select <strong>"Add to Home Screen"</strong>.</li>
-              <li>Launch Milwin directly from your home screen!</li>
-            </ol>
-          </div>
-        )}
-
-        {activeTab === "qr" && (
-          <div className="bg-[#111622] border border-slate-800 rounded-3xl p-8 text-center space-y-4 shadow-2xl">
-            <h2 className="text-xl font-bold text-amber-400">Scan QR Code for Instant Mobile Download</h2>
-            <p className="text-sm text-slate-400 max-w-md mx-auto">
-              Scan this code with your phone camera to open the direct APK installer on your device.
-            </p>
-            <div className="inline-block bg-white p-5 rounded-3xl border-4 border-amber-500/50 shadow-xl my-4">
-              <svg className="w-44 h-44" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="100" height="100" fill="white" />
-                <path d="M0 0h35v35H0zM5 5v25h25V5zM10 10h15v15H10z" fill="#000" />
-                <path d="M65 0h35v35H65zM70 5v25h25V5zM75 10h15v15H75z" fill="#000" />
-                <path d="M0 65h35v35H0zM5 70v25h25V70zM10 75h15v15H10z" fill="#000" />
-                <rect x="40" y="10" width="15" height="15" fill="#000" />
-                <rect x="45" y="45" width="20" height="20" fill="#000" />
-                <rect x="75" y="45" width="15" height="15" fill="#000" />
-                <rect x="40" y="75" width="15" height="15" fill="#000" />
-                <rect x="65" y="65" width="25" height="25" fill="#d97706" />
-              </svg>
             </div>
           </div>
         )}

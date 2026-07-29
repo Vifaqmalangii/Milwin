@@ -28,7 +28,9 @@ export default function HeroBanner({ onOpenAuth }: HeroBannerProps) {
 
             <div className="flex justify-center lg:justify-start pt-2">
               <a
-                href="#games"
+                href="https://milapp.win/?dl=4kz455"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-12 lg:px-20 py-3 sm:py-4 rounded-full btn-gold text-sm sm:text-base lg:text-lg font-extrabold uppercase tracking-wider shadow-xl shadow-amber-500/30 transition-all hover:scale-105 active:scale-95 min-h-[44px]"
               >
                 <FaArrowDown className="text-base sm:text-lg lg:text-xl" /> DOWNLOAD APK
@@ -44,6 +46,8 @@ export default function HeroBanner({ onOpenAuth }: HeroBannerProps) {
                 alt="Milwin Game APK Android app with online casino games - Teen Patti, Slots, Roulette and instant withdrawals to JazzCash EasyPaisa"
                 fill
                 priority
+                fetchPriority="high"
+                loading="eager"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d14] via-transparent to-transparent"></div>

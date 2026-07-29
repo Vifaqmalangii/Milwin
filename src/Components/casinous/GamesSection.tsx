@@ -232,9 +232,9 @@ export default function GamesSection() {
 
               {/* Card Body Content */}
               <div className="p-2 sm:p-3 text-center">
-                <h4 className="text-[11px] sm:text-xs lg:text-sm font-bold text-white group-hover:text-amber-400 transition-colors truncate">
+                <h3 className="text-[11px] sm:text-xs lg:text-sm font-bold text-white group-hover:text-amber-400 transition-colors truncate">
                   {game.title}
-                </h4>
+                </h3>
               </div>
             </div>
           ))}
@@ -272,7 +272,7 @@ export default function GamesSection() {
                     {idx + 1}
                   </span>
                   <div className="space-y-0.5">
-                    <h4 className="text-sm font-bold text-white uppercase">{step.title}</h4>
+                    <h3 className="text-sm font-bold text-white uppercase">{step.title}</h3>
                     <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{step.desc}</p>
                   </div>
                 </div>

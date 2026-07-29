@@ -7,37 +7,18 @@ import Image from "next/image";
 import { FaDice, FaCalendarAlt, FaUser, FaArrowRight, FaBlog, FaBars, FaTimes } from "react-icons/fa";
 import Breadcrumb from "@/Components/Breadcrumb";
 
-const blogPosts = [
-  {
-    id: "how-to-win-teen-patti-milwin",
-    title: "Top 5 Winning Strategies for Teen Patti on Milwin Game APK",
-    excerpt: "Learn the secrets and best tips to increase your win rate in Teen Patti on Milwin. Master bankroll management and hand reading.",
-    date: "July 25, 2026",
-    author: "Milwin Gaming Team",
-    image: "/images/card.png",
-    altText: "Teen Patti card game strategy guide - Learn winning tips and tricks to earn real money on Milwin APK",
-    category: "Game Guide",
-  },
-  {
-    id: "milwin-daily-bonus-guide",
-    title: "How to Claim Maximum Daily Login Bonuses in Milwin App",
-    excerpt: "Discover how to claim free daily coins, registration rewards, and referral bonuses without spending money.",
-    date: "July 22, 2026",
-    author: "Milwin Support",
-    image: "/images/slot.png",
-    altText: "Milwin slot machine game tutorial - Daily login bonus and free coins rewards guide",
-    category: "Rewards & Bonuses",
-  },
-  {
-    id: "fast-withdrawals-jazzcash-easypaisa",
-    title: "Instant Withdrawal Guide: How to Withdraw Money via JazzCash & Easypaisa",
-    excerpt: "Step-by-step tutorial on withdrawing your game earnings directly to your mobile wallet in under 5 minutes.",
-    date: "July 18, 2026",
-    author: "Payment Team",
-    image: "/images/roulette.png",
-    altText: "Milwin withdrawal guide - Fast money transfer to JazzCash and Easypaisa in Pakistan",
-    category: "Withdrawal Guide",
-  },
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  altText?: string;
+  category: string;
+  date: string;
+  author: string;
+}
+
+const blogPosts: BlogPost[] = [
 ];
 
 export default function BlogPage() {

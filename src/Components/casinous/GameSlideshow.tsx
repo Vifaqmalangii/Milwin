@@ -114,8 +114,8 @@ export default function GameSlideshow() {
             onClick={() => goTo(i, i > current ? "right" : "left")}
             aria-label={`Go to slide ${i + 1}`}
             className={`rounded-full transition-all duration-300 ${i === current
-                ? "bg-amber-500 w-6 h-2"
-                : "bg-slate-600 hover:bg-slate-400 w-2 h-2"
+                ? "bg-amber-500 w-6 h-6"
+                : "bg-slate-600 hover:bg-slate-400 w-8 h-8"
               }`}
           />
         ))}
