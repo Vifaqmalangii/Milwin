@@ -10,7 +10,7 @@ Disallow: /*.json$
 Disallow: /*.xml$
 
 # Sitemap location for search engines
-Sitemap: https://milwin.com/sitemap.xml
+Sitemap: https://milwin.com/sitemap-index.xml
 
 # Google specific
 User-agent: Googlebot

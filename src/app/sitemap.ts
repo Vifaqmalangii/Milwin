@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://milwin.com';
 
-  // Main Pages
+  // Main Pages & User Pages
   const mainPages = [
     {
       url: baseUrl,
@@ -23,10 +23,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     },
-  ];
-
-  // User Action Pages
-  const actionPages = [
     {
       url: `${baseUrl}/deposit`,
       lastModified: new Date(),
@@ -53,18 +49,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Blog Posts
-  const blogPosts = [
+  // Content & Blog Pages
+  const contentPages = [
     {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: 'daily' as const,
       priority: 0.9,
     },
-  ];
-
-  // Support Pages
-  const supportPages = [
     {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
@@ -73,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Legal Pages
+  // Legal & Policy Pages
   const legalPages = [
     {
       url: `${baseUrl}/privacy-policy`,
@@ -95,7 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Game Category Pages (Future)
+  // Game Category Pages
   const gamePages = [
     {
       url: `${baseUrl}/games/teen-patti`,
@@ -119,9 +111,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...mainPages,
-    ...actionPages,
-    ...blogPosts,
-    ...supportPages,
+    ...contentPages,
     ...legalPages,
     ...gamePages,
   ];
