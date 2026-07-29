@@ -54,8 +54,7 @@ export default function GameSlideshow() {
   return (
     <div className="relative w-full select-none">
       {/* Main Slide */}
-      <div className="relative mx-auto overflow-hidden rounded-2xl border border-amber-500/20 shadow-2xl shadow-amber-500/10 bg-white"
-        style={{ maxWidth: "360px", aspectRatio: "9/16" }}
+      <div className="relative mx-auto overflow-hidden rounded-2xl border border-amber-500/20 shadow-2xl shadow-amber-500/10 bg-white max-w-[360px] aspect-[9/16]"
       >
         <Image
           src={slides[current].src}

@@ -12,19 +12,19 @@ interface WinnerItem {
 }
 
 const latestWinners: WinnerItem[] = [
-  { id: 1, name: "Munna Ahmed", amount: "$150 USD", game: "Roulette", avatar: "/images/dice.png" },
-  { id: 2, name: "Fahad Bin", amount: "$270 USD", game: "Dice 3D", avatar: "/images/card.png" },
-  { id: 3, name: "Rafuj Raiha", amount: "$52,000 USD", game: "Slots 777", avatar: "/images/slot.png" },
-  { id: 4, name: "Suraiya Nesa", amount: "$1,450 USD", game: "Blackjack", avatar: "/images/roulette.png" },
-  { id: 5, name: "Tariq Malik", amount: "$3,800 USD", game: "Poker", avatar: "/images/card.png" },
+  { id: 1, name: "Munna Ahmed", amount: "$150 USD", game: "Roulette", avatar: "/images/dice.webp" },
+  { id: 2, name: "Fahad Bin", amount: "$270 USD", game: "Dice 3D", avatar: "/images/card.webp" },
+  { id: 3, name: "Rafuj Raiha", amount: "$52,000 USD", game: "Slots 777", avatar: "/images/slot.webp" },
+  { id: 4, name: "Suraiya Nesa", amount: "$1,450 USD", game: "Blackjack", avatar: "/images/roulette.webp" },
+  { id: 5, name: "Tariq Malik", amount: "$3,800 USD", game: "Poker", avatar: "/images/card.webp" },
 ];
 
 const topInvestors: WinnerItem[] = [
-  { id: 1, name: "Alexander K.", amount: "$120,500", game: "VIP Platinum", avatar: "/images/card.png" },
-  { id: 2, name: "Elena Rostova", amount: "$98,400", game: "VIP Gold", avatar: "/images/dice.png" },
-  { id: 3, name: "Chen Wei", amount: "$85,000", game: "VIP Diamond", avatar: "/images/roulette.png" },
-  { id: 4, name: "Marcus Vance", amount: "$64,200", game: "VIP Silver", avatar: "/images/slot.png" },
-  { id: 5, name: "Sara Connor", amount: "$42,900", game: "VIP Bronze", avatar: "/images/card.png" },
+  { id: 1, name: "Alexander K.", amount: "$120,500", game: "VIP Platinum", avatar: "/images/card.webp" },
+  { id: 2, name: "Elena Rostova", amount: "$98,400", game: "VIP Gold", avatar: "/images/dice.webp" },
+  { id: 3, name: "Chen Wei", amount: "$85,000", game: "VIP Diamond", avatar: "/images/roulette.webp" },
+  { id: 4, name: "Marcus Vance", amount: "$64,200", game: "VIP Silver", avatar: "/images/slot.webp" },
+  { id: 5, name: "Sara Connor", amount: "$42,900", game: "VIP Bronze", avatar: "/images/card.webp" },
 ];
 
 export default function TopWinnersInvestors() {

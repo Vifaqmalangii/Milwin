@@ -18,7 +18,7 @@ const testimonials: Testimonial[] = [
     name: "Suraiya Nesa",
     role: "Top Poker Player",
     comment: "Milwin is hands down the smoothest crypto casino I've used. I withdrew my $14,000 roulette winnings in under 45 seconds!",
-    avatar: "/images/card.png",
+    avatar: "/images/card.webp",
     rating: 5,
   },
   {
@@ -26,7 +26,7 @@ const testimonials: Testimonial[] = [
     name: "Munna Ahmed",
     role: "High Roller VIP",
     comment: "The provably fair system gives me total peace of mind. Great bonus cashback and 24/7 account managers always ready to help.",
-    avatar: "/images/dice.png",
+    avatar: "/images/dice.webp",
     rating: 5,
   },
   {
@@ -34,7 +34,7 @@ const testimonials: Testimonial[] = [
     name: "Rafuj Raihan",
     role: "Slots Master",
     comment: "The 3D slots and multiplier wheel games are super fun and rewarding. Got 500x multiplier on my very first week!",
-    avatar: "/images/slot.png",
+    avatar: "/images/slot.webp",
     rating: 5,
   },
 ];

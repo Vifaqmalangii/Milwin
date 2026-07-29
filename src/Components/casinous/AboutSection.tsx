@@ -12,7 +12,7 @@ export default function AboutSection() {
           <div className="relative flex justify-center order-2 lg:order-1">
             <div className="relative w-full max-w-lg aspect-square rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl shadow-amber-500/10">
               <Image
-                src="/images/card.png"
+                src="/images/card.webp"
                 alt="Milwin Game cards gameplay - Pakistani online casino platform for earning real money through Teen Patti and card games"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-500"
