@@ -17,70 +17,70 @@ const gamesData: GameDetails[] = [
     title: "Teen Patti",
     category: "Cards",
     investLimit: "$5.00 - $500",
-    image: "/top-game-images/Teen%20patti.webp",
+    image: "/top-game-images-1/Teen%20patti.webp",
   },
   {
     id: "poker",
     title: "Poker",
     category: "Cards",
     investLimit: "$5.00 - $500",
-    image: "/top-game-images/Poker.webp",
+    image: "/top-game-images-1/Poker.webp",
   },
   {
     id: "slots",
     title: "Slots",
     category: "Slots",
     investLimit: "$5.00 - $500",
-    image: "/top-game-images/slots.webp",
+    image: "/top-game-images-1/slots.webp",
   },
   {
     id: "roulette",
     title: "Roulette",
     category: "Roulette",
     investLimit: "$5.00 - $500",
-    image: "/top-game-images/roulette.webp",
+    image: "/top-game-images-1/roulette.webp",
   },
   {
     id: "aviator",
     title: "Aviator",
     category: "Crash",
     investLimit: "$5.00 - $500",
-    image: "/top-game-images/aviator.webp",
+    image: "/top-game-images-1/aviator.webp",
   },
   {
     id: "dragon-tiger",
     title: "Dragon Tiger",
     category: "Cards",
     investLimit: "$5.00 - $500",
-    image: "/top-game-images/Dragon%20Tiger.webp",
+    image: "/top-game-images-1/Dragon%20Tiger.webp",
   },
   {
     id: "crash-game",
     title: "Crash Game",
     category: "Crash",
     investLimit: "$5.00 - $500",
-    image: "/top-game-images/crash%20Game.webp",
+    image: "/top-game-images-1/crash%20Game.webp",
   },
   {
     id: "fishing-game",
     title: "Fishing Game",
     category: "Arcade",
     investLimit: "$5.00 - $500",
-    image: "/top-game-images/Fishing%20Game.webp",
+    image: "/top-game-images-1/Fishing%20Game.webp",
   },
   {
     id: "lucky-wheel",
     title: "Lucky Wheel",
     category: "Roulette",
     investLimit: "$5.00 - $500",
-    image: "/top-game-images/Lucky%20Wheel.webp",
+    image: "/top-game-images-1/Lucky%20Wheel.webp",
   },
   {
     id: "color-prediction",
     title: "Color Prediction",
     category: "Number",
     investLimit: "$5.00 - $500",
-    image: "/top-game-images/color%20prediction.webp",
+    image: "/top-game-images-1/color%20prediction.webp",
   },
 ];
 
@@ -225,7 +225,7 @@ export default function GamesSection() {
               <div className="relative w-full aspect-[4/3] bg-[#0d121d]">
                 <Image
                   src={game.image}
-                  alt={`${game.title} - Play ${game.title} game on Milwin and earn real cash with betting limits from ${game.investLimit}`}
+                  alt={game.title}
                   width={320}
                   height={240}
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"

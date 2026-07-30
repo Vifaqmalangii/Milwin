@@ -42,7 +42,7 @@ export default function HeroBanner({ onOpenAuth }: HeroBannerProps) {
           <div className="relative flex justify-center items-center">
             <div className="relative w-full max-w-lg aspect-square rounded-2xl overflow-hidden border border-amber-500/30">
               <Image
-                src="/hero-image.webp"
+                src="/hero-image-1.webp"
                 alt="Milwin Game APK Android app with online casino games - Teen Patti, Slots, Roulette and instant withdrawals to JazzCash EasyPaisa"
                 width={1200}
                 height={1200}
