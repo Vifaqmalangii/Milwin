@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Download Milwin Game APK - Latest Version",
     description: "Download Milwin APK for Android with step-by-step installation guide. Play casino games and earn real money.",
-    url: "https://milwin.com/download",
+    url: "https://milwingames.pk/download",
     type: "website",
   },
 };

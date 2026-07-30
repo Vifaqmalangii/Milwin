@@ -1,0 +1,19 @@
+# Milwin Games
+
+Milwin Games is an online gaming platform where users can download the Android APK, play games like Teen Patti, Slots, and Roulette, and use fast deposit and withdrawal options.
+
+## Important Public URLs
+
+- [Home](https://milwingames.pk/)
+- [About Us](https://milwingames.pk/about)
+- [Contact Us](https://milwingames.pk/contact)
+- [Blog](https://milwingames.pk/blog)
+- [Download](https://milwingames.pk/download)
+- [Deposit](https://milwingames.pk/deposit)
+- [Withdraw](https://milwingames.pk/withdraw)
+- [Register](https://milwingames.pk/register)
+- [Privacy Policy](https://milwingames.pk/privacy-policy)
+- [Terms & Conditions](https://milwingames.pk/terms-and-conditions)
+- [Disclaimer](https://milwingames.pk/disclaimer)
+- [FAQ](https://milwingames.pk/#faq)
+- [Sitemap.xml](https://milwingames.pk/sitemap.xml)

@@ -188,7 +188,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
 
             <ol className="list-decimal list-inside space-y-2 text-xs sm:text-sm text-slate-300 bg-[#131927] p-4 rounded-xl border border-slate-800">
               <li>Open <strong>Safari</strong> browser on your iPhone or iPad.</li>
-              <li>Navigate to our official portal <strong>milwin.com</strong>.</li>
+              <li>Navigate to our official portal <strong>milwingames.pk</strong>.</li>
               <li>Tap the <strong>Share Button</strong> (box with up arrow at bottom of Safari).</li>
               <li>Scroll down and select <strong>"Add to Home Screen"</strong>.</li>
               <li>Launch Milwin from your home screen just like a native app!</li>

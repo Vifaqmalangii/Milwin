@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Deposit on Milwin Game - Instant & Secure",
     description: "Deposit money quickly and securely on Milwin Game. Get bonuses on every deposit!",
-    url: "https://milwin.com/deposit",
+    url: "https://milwingames.pk/deposit",
     type: "website",
   },
 };

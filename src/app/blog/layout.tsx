@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Milwin Game Blog - Gaming Strategies & Tips",
     description: "Discover winning strategies, game guides, bonus tips and more on Milwin Game blog.",
-    url: "https://milwin.com/blog",
+    url: "https://milwingames.pk/blog",
     type: "website",
   },
 };

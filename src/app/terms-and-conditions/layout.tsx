@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Milwin Game Terms & Conditions",
     description: "Review Milwin Game terms and conditions for safe and fair gaming.",
-    url: "https://milwin.com/terms-and-conditions",
+    url: "https://milwingames.pk/terms-and-conditions",
     type: "website",
   },
 };

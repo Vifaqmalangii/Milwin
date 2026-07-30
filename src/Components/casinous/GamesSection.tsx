@@ -17,70 +17,70 @@ const gamesData: GameDetails[] = [
     title: "Teen Patti",
     category: "Cards",
     investLimit: "$5.00 - $500",
-    image: "/images/card.webp",
+    image: "/top-game-images/Teen%20patti.webp",
   },
   {
     id: "poker",
     title: "Poker",
     category: "Cards",
     investLimit: "$5.00 - $500",
-    image: "/images/card.webp",
+    image: "/top-game-images/Poker.webp",
   },
   {
     id: "slots",
     title: "Slots",
     category: "Slots",
     investLimit: "$5.00 - $500",
-    image: "/images/slot.webp",
+    image: "/top-game-images/slots.webp",
   },
   {
     id: "roulette",
     title: "Roulette",
     category: "Roulette",
     investLimit: "$5.00 - $500",
-    image: "/images/roulette.webp",
+    image: "/top-game-images/roulette.webp",
   },
   {
     id: "aviator",
     title: "Aviator",
     category: "Crash",
     investLimit: "$5.00 - $500",
-    image: "/images/dice.webp",
+    image: "/top-game-images/aviator.webp",
   },
   {
     id: "dragon-tiger",
     title: "Dragon Tiger",
     category: "Cards",
     investLimit: "$5.00 - $500",
-    image: "/images/card.webp",
+    image: "/top-game-images/Dragon%20Tiger.webp",
   },
   {
     id: "crash-game",
     title: "Crash Game",
     category: "Crash",
     investLimit: "$5.00 - $500",
-    image: "/images/dice.webp",
+    image: "/top-game-images/crash%20Game.webp",
   },
   {
     id: "fishing-game",
     title: "Fishing Game",
     category: "Arcade",
     investLimit: "$5.00 - $500",
-    image: "/images/card.webp",
+    image: "/top-game-images/Fishing%20Game.webp",
   },
   {
     id: "lucky-wheel",
     title: "Lucky Wheel",
     category: "Roulette",
     investLimit: "$5.00 - $500",
-    image: "/images/roulette.webp",
+    image: "/top-game-images/Lucky%20Wheel.webp",
   },
   {
     id: "color-prediction",
     title: "Color Prediction",
     category: "Number",
     investLimit: "$5.00 - $500",
-    image: "/images/dice.webp",
+    image: "/top-game-images/color%20prediction.webp",
   },
 ];
 
@@ -219,28 +219,25 @@ export default function GamesSection() {
           {filteredGames.map((game) => (
             <div
               key={game.id}
-              className="casino-card group overflow-hidden rounded-xl bg-[#131927] border border-slate-800 flex flex-col justify-between hover:border-amber-500/60 transition-all shadow-md"
+              className="overflow-hidden rounded-xl bg-[#131927] border border-slate-800 flex flex-col"
             >
               {/* Card Thumbnail */}
-              <div className="relative w-full aspect-[4/3] bg-[#0d121d] overflow-hidden">
+              <div className="relative w-full aspect-[4/3] bg-[#0d121d]">
                 <Image
                   src={game.image}
                   alt={`${game.title} - Play ${game.title} game on Milwin and earn real cash with betting limits from ${game.investLimit}`}
-                  width={400}
-                  height={300}
+                  width={320}
+                  height={240}
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                  quality={80}
-                  className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  quality={60}
+                  className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#131927] via-transparent to-transparent opacity-80"></div>
-                <span className="absolute top-2 right-2 px-2 py-0.5 rounded bg-black/70 backdrop-blur-md text-[9px] font-bold text-amber-400 border border-amber-500/30 uppercase">
-                  {game.category}
-                </span>
               </div>
 
               {/* Card Body Content */}
-              <div className="p-2 sm:p-3 text-center">
-                <h3 className="text-[11px] sm:text-xs lg:text-sm font-bold text-white group-hover:text-amber-400 transition-colors truncate">
+              <div className="p-2 sm:p-3 text-center bg-[#131927]">
+                <h3 className="text-[11px] sm:text-xs lg:text-sm font-bold text-white truncate">
                   {game.title}
                 </h3>
               </div>

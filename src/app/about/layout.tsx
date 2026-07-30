@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Milwin Game - Pakistan's #1 Trusted Online Casino",
     description: "Learn about Milwin Game with instant withdrawals and secure gaming.",
-    url: "https://milwin.com/about",
+    url: "https://milwingames.pk/about",
     type: "website",
   },
 };

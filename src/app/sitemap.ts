@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://milwin.com';
+  const baseUrl = 'https://milwingames.pk';
 
   // Main Pages & User Pages
   const mainPages = [

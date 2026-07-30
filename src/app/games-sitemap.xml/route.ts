@@ -1,7 +1,7 @@
 export const dynamic = "force-static";
 
 export async function GET() {
-  const baseUrl = 'https://milwin.com';
+  const baseUrl = 'https://milwingames.pk';
   const lastModified = new Date().toISOString();
 
   const games = [

@@ -73,7 +73,7 @@ export default function Breadcrumb() {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `https://milwin.com${item.href}`,
+      item: `https://milwingames.pk${item.href}`,
     })),
   };
 

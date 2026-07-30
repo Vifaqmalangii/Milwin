@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Milwin Game Disclaimer",
     description: "Important disclaimer and legal notice for Milwin Game players.",
-    url: "https://milwin.com/disclaimer",
+    url: "https://milwingames.pk/disclaimer",
     type: "website",
   },
 };

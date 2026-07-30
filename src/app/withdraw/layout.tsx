@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Withdraw from Milwin Game - Instant Payouts",
     description: "Withdraw your winnings instantly from Milwin Game. Fast, secure, and hassle-free withdrawals!",
-    url: "https://milwin.com/withdraw",
+    url: "https://milwingames.pk/withdraw",
     type: "website",
   },
 };

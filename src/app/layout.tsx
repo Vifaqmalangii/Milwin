@@ -3,11 +3,12 @@ import Providers from "@/Components/Providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://milwingames.pk"),
   title: {
     default: "Milwin Game Download Official App - Play & Earn Real Cash",
     template: "%s | Milwin Game",
   },
-  description: "Download Milwin APK latest version for Android. Play casino games like Teen Patti, Slots, Roulette and earn real money with fast withdrawals. Pakistan's #1 trusted online casino platform.",
+  description: "Download the latest Milwin APK for Android and enjoy Teen Patti, Slots, Roulette, and more. Play casino games, win real money, and get fast withdrawals.",
   keywords: "milwin game, milwin apk, online casino pakistan, teen patti game, slots game, casino app android, real money games, fast withdrawal casino",
   authors: [{ name: "Milwin Gaming Team" }],
   creator: "Milwin Game",
@@ -20,13 +21,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://milwin.com",
+    url: "https://milwingames.pk",
     siteName: "Milwin Game",
     title: "Milwin Game Download Official App - Play & Earn Real Cash",
     description: "Download Milwin APK and earn real money playing casino games. Teen Patti, Slots, Roulette with instant withdrawals.",
     images: [
       {
-        url: "https://milwin.com/og-image.png",
+        url: "https://milwingames.pk/og-image.png",
         width: 1200,
         height: 630,
         alt: "Milwin Game Official App",
@@ -38,11 +39,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Milwin Game - Online Casino App",
     description: "Play casino games and earn real cash on Milwin. Download APK now!",
-    images: ["https://milwin.com/twitter-image.png"],
+    images: ["https://milwingames.pk/twitter-image.png"],
     creator: "@milwingame",
   },
   alternates: {
-    canonical: "https://milwin.com",
+    canonical: "./",
   },
   robots: {
     index: true,
@@ -69,8 +70,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Milwin Game",
-    "url": "https://milwin.com",
-    "logo": "https://milwin.com/logo.png",
+    "url": "https://milwingames.pk",
+    "logo": "https://milwingames.pk/logo.png",
     "description": "Pakistan's #1 trusted online casino platform with instant withdrawals",
     "sameAs": [
       "https://facebook.com/milwingame",
@@ -108,7 +109,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="canonical" href="https://milwin.com" />
         <link rel="icon" href="/favicon.ico" />
         
         {/* Organization Schema */}

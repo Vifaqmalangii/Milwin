@@ -79,10 +79,10 @@ export default function SitemapPage() {
         {/* SEO Info */}
         <div className="bg-gradient-to-r from-amber-500/10 to-amber-400/5 border border-amber-500/20 rounded-lg p-6 mb-8">
           <p className="text-slate-300 text-sm">
-            📍 <strong>XML Sitemap:</strong> <Link href="/sitemap.xml" className="text-amber-400 hover:text-amber-300">milwin.com/sitemap.xml</Link>
+            📍 <strong>XML Sitemap:</strong> <Link href="/sitemap.xml" className="text-amber-400 hover:text-amber-300">milwingames.pk/sitemap.xml</Link>
           </p>
           <p className="text-slate-300 text-sm mt-2">
-            🤖 <strong>Robots.txt:</strong> <Link href="/robots.txt" className="text-amber-400 hover:text-amber-300">milwin.com/robots.txt</Link>
+            🤖 <strong>Robots.txt:</strong> <Link href="/robots.txt" className="text-amber-400 hover:text-amber-300">milwingames.pk/robots.txt</Link>
           </p>
         </div>
       </section>

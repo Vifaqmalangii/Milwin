@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Register Milwin Game Account - Free Signup",
     description: "Join Milwin Game today! Quick registration and instant welcome bonus waiting for you.",
-    url: "https://milwin.com/register",
+    url: "https://milwingames.pk/register",
     type: "website",
   },
 };

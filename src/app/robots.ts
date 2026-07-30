@@ -20,6 +20,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: '/',
       },
     ],
-    sitemap: 'https://milwin.com/sitemap.xml',
+    sitemap: 'https://milwingames.pk/sitemap.xml',
   };
 }

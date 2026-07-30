@@ -113,7 +113,7 @@ export default function ContactPage() {
                 Reach <span className="text-amber-400">Us</span>
               </h2>
               {[
-                { icon: <FaEnvelope />, color: "text-amber-400", bg: "bg-amber-500/10", label: "Email", value: "support@milwin.com" },
+                { icon: <FaEnvelope />, color: "text-amber-400", bg: "bg-amber-500/10", label: "Email", value: "support@milwingames.pk" },
                 { icon: <FaClock />, color: "text-cyan-400", bg: "bg-cyan-500/10", label: "Support Hours", value: "24/7 — Always Available" },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-4">

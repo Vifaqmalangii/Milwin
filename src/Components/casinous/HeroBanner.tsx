@@ -40,9 +40,9 @@ export default function HeroBanner({ onOpenAuth }: HeroBannerProps) {
 
           {/* Right Column Visual Artwork */}
           <div className="relative flex justify-center items-center">
-            <div className="relative w-full max-w-lg aspect-square rounded-2xl overflow-hidden shadow-2xl shadow-amber-500/20 border border-amber-500/30 group">
+            <div className="relative w-full max-w-lg aspect-square rounded-2xl overflow-hidden border border-amber-500/30">
               <Image
-                src="/images/hero_banner.webp"
+                src="/hero-image.webp"
                 alt="Milwin Game APK Android app with online casino games - Teen Patti, Slots, Roulette and instant withdrawals to JazzCash EasyPaisa"
                 width={1200}
                 height={1200}
@@ -50,10 +50,9 @@ export default function HeroBanner({ onOpenAuth }: HeroBannerProps) {
                 fetchPriority="high"
                 loading="eager"
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                quality={80}
-                className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700"
+                quality={65}
+                className="h-full w-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d14] via-transparent to-transparent"></div>
             </div>
           </div>
         </div>

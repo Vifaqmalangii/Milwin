@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact Milwin Game - 24/7 Support",
     description: "Reach out to Milwin Game support team available 24/7 for instant help.",
-    url: "https://milwin.com/contact",
+    url: "https://milwingames.pk/contact",
     type: "website",
   },
 };
