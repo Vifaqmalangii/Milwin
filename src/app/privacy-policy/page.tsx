@@ -1,30 +1,16 @@
 "use client";
 
+import Navbar from "@/Components/casinous/Navbar";
+import Footer from "@/Components/casinous/Footer";
 import Link from "next/link";
-import { FaDice, FaUserShield, FaLock } from "react-icons/fa";
+import { FaUserShield, FaLock } from "react-icons/fa";
 import Breadcrumb from "@/Components/Breadcrumb";
 
 export default function PrivacyPolicyPage() {
   return (
     <main className="min-h-screen bg-[#0a0d14] text-white">
-      {/* Header / Navbar */}
-      <header className="sticky top-0 z-40 w-full bg-[#0a0d14]/90 backdrop-blur-lg border-b border-amber-500/20 shadow-xl">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center text-black text-2xl shadow-lg shadow-amber-500/30 group-hover:scale-105 transition-transform">
-              <FaDice />
-            </div>
-            <span className="text-2xl font-black tracking-wider uppercase text-white">
-              MIL<span className="text-amber-400">WIN</span>
-            </span>
-          </Link>
-          <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold tracking-wide text-slate-300">
-            <Link href="/" className="hover:text-amber-400 transition-colors py-2">Home</Link>
-            <Link href="/about" className="hover:text-amber-400 transition-colors py-2">About Us</Link>
-            <Link href="/contact" className="hover:text-amber-400 transition-colors py-2">Contact Us</Link>
-          </nav>
-        </div>
-      </header>
+      {/* Navbar */}
+      <Navbar />
 
       {/* Breadcrumb Navigation */}
       <Breadcrumb />
@@ -148,6 +134,9 @@ export default function PrivacyPolicyPage() {
 
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </main>
   );
 }

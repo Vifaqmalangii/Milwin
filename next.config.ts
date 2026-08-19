@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     unoptimized: true,
+    qualities: [65, 75, 80, 85, 90, 100],
     remotePatterns: [],
   },
   compress: true,

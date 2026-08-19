@@ -36,14 +36,14 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-20 bg-[#0d121d] relative overflow-hidden">
+    <section id="faq" className="py-10 sm:py-12 lg:py-14 bg-[#0d121d] relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 space-y-2 sm:space-y-3">
           <span className="text-xs font-bold uppercase tracking-widest text-amber-400">
             Got Questions?
           </span>
-          <h2 className="text-3xl sm:text-5xl font-black uppercase text-white tracking-wide">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase text-white tracking-wide">
             Frequently Asked <span className="text-gold-gradient">Questions</span>
           </h2>
           <p className="text-slate-400 text-sm sm:text-base">
@@ -52,7 +52,7 @@ export default function FaqSection() {
         </div>
 
         {/* FAQ Accordion List */}
-        <div className="space-y-4 max-w-3xl mx-auto mb-12">
+        <div className="space-y-3 sm:space-y-4 max-w-3xl mx-auto mb-8 sm:mb-10">
           {faqs.map((faq) => {
             const isOpen = openId === faq.id;
             return (
@@ -99,13 +99,13 @@ export default function FaqSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/blog"
-              className="px-6 py-3 rounded-lg bg-purple-500 hover:bg-purple-600 text-white font-bold uppercase text-sm transition-colors"
+              className="px-6 py-3 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-extrabold uppercase text-sm transition-all shadow-md shadow-purple-600/20 text-center"
             >
               Read Game Guides
             </Link>
             <Link
               href="/contact"
-              className="px-6 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-600 text-white font-bold uppercase text-sm transition-colors"
+              className="px-6 py-3 rounded-lg bg-cyan-400 hover:bg-cyan-300 text-black font-extrabold uppercase text-sm transition-all shadow-md shadow-cyan-500/20 text-center"
             >
               Contact Support
             </Link>

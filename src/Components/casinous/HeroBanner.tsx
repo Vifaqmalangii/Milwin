@@ -9,51 +9,48 @@ interface HeroBannerProps {
 
 export default function HeroBanner({ onOpenAuth }: HeroBannerProps) {
   return (
-    <section id="home" className="relative min-h-[80vh] flex items-center pt-8 pb-16 overflow-hidden bg-gradient-to-b from-[#0a0d14] via-[#0f1422] to-[#0a0d14]">
+    <section id="home" className="relative flex items-center justify-center py-10 sm:py-12 lg:py-16 overflow-hidden">
+      {/* Background Image with Dark Gradient Overlays */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/herobg.webp"
+          alt="Milwin Hero Background"
+          fill
+          priority
+          sizes="100vw"
+          quality={75}
+          className="object-cover object-center"
+        />
+        {/* Gradient overlays to ensure text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0d14]/90 via-[#0a0d14]/75 to-[#0a0d14]"></div>
+        <div className="absolute inset-0 bg-[#0a0d14]/40"></div>
+      </div>
+
       {/* Glow Effects Backdrop */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-amber-500/15 rounded-full blur-3xl pointer-events-none z-0"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column Text Content */}
-          <div className="space-y-6 text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black uppercase leading-tight tracking-tight text-white">
-              Milwin <span className="text-gold-gradient">Game Download</span> Official App Latest V 1.1.17 For Android
-            </h1>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
+        <div className="space-y-6">
+          {/* Main Headline */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black uppercase leading-tight tracking-tight text-white drop-shadow-lg">
+            Milwin <span className="text-gold-gradient">Game Download</span> Official App Latest V 1.1.17 For Android
+          </h1>
 
-            <p className="text-slate-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-medium">
-              Download Milwin APK latest version for Android. Play games, earn real cash, and enjoy fast withdrawals with easy use.
-            </p>
+          {/* Subheading */}
+          <p className="text-slate-200 text-base sm:text-lg max-w-2xl mx-auto font-medium drop-shadow">
+            Download Milwin APK latest version for Android. Play games, earn real cash, and enjoy fast withdrawals with easy use.
+          </p>
 
-            <div className="flex justify-center lg:justify-start pt-2">
-              <a
-                href="https://milapp.win/?dl=4kz455"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-12 lg:px-20 py-3 sm:py-4 rounded-full btn-gold text-sm sm:text-base lg:text-lg font-extrabold uppercase tracking-wider shadow-xl shadow-amber-500/30 transition-all hover:scale-105 active:scale-95 min-h-[44px]"
-              >
-                <FaArrowDown className="text-base sm:text-lg lg:text-xl" /> DOWNLOAD APK
-              </a>
-            </div>
-          </div>
-
-          {/* Right Column Visual Artwork */}
-          <div className="relative flex justify-center items-center">
-            <div className="relative w-full max-w-lg aspect-square rounded-2xl overflow-hidden border border-amber-500/30">
-              <Image
-                src="/hero-image-1.webp"
-                alt="Milwin Game APK Android app with online casino games - Teen Patti, Slots, Roulette and instant withdrawals to JazzCash EasyPaisa"
-                width={1200}
-                height={1200}
-                priority
-                fetchPriority="high"
-                loading="eager"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                quality={65}
-                className="h-full w-full object-cover"
-              />
-            </div>
+          {/* Download CTA Button */}
+          <div className="flex justify-center pt-4">
+            <a
+              href="https://milapp.win/?dl=4kz455"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 sm:gap-3 px-8 sm:px-14 lg:px-20 py-3.5 sm:py-4 rounded-full btn-gold text-base sm:text-lg font-extrabold uppercase tracking-wider shadow-2xl shadow-amber-500/40 transition-all hover:scale-105 active:scale-95 min-h-[48px]"
+            >
+              <FaArrowDown className="text-lg sm:text-xl" /> DOWNLOAD APK
+            </a>
           </div>
         </div>
       </div>

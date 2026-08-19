@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaDice } from 'react-icons/fa';
+import Navbar from '@/Components/casinous/Navbar';
+import Footer from '@/Components/casinous/Footer';
 import Breadcrumb from '@/Components/Breadcrumb';
 
 export default function SitemapPage() {
@@ -55,18 +56,25 @@ export default function SitemapPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#0a0d14] text-white py-16">
+    <main className="min-h-screen bg-[#0a0d14] text-white">
+      {/* Navbar */}
+      <Navbar />
+
       {/* Breadcrumb Navigation */}
       <Breadcrumb />
 
       {/* Header */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="text-center mb-10">
-          {/* Logo/Favicon Display */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 mb-8">
+        <div className="text-center mb-8">
+          {/* Logo Display */}
           <div className="mb-6 flex justify-center">
-            <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center text-5xl shadow-lg shadow-amber-500/30">
-              <FaDice />
-            </div>
+            <Image
+              src="/milwinlogo.webp"
+              alt="Milwin Logo"
+              width={160}
+              height={48}
+              className="h-12 w-auto object-contain"
+            />
           </div>
           <h1 className="text-4xl sm:text-5xl font-black uppercase text-white mb-4">
             Site<span className="text-amber-400">map</span>
@@ -148,6 +156,9 @@ export default function SitemapPage() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </main>
   );
 }

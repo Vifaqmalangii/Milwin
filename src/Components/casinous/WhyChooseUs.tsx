@@ -5,8 +5,8 @@ import { FaStar, FaGift } from "react-icons/fa";
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-us" className="py-20 bg-[#0d121d] relative overflow-hidden">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+    <section id="why-us" className="py-10 sm:py-12 lg:py-14 bg-[#0d121d] relative overflow-hidden">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6 sm:space-y-8">
 
         {/* Block 1: Why Milwin is Popular */}
         <div className="p-6 sm:p-8 rounded-2xl bg-[#0a0d14] border border-amber-500/20 shadow-xl space-y-4">
@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
           </p>
           <Link
             href="/about"
-            className="inline-flex px-5 py-2 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm transition-colors"
+            className="inline-flex px-5 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-black font-extrabold text-sm transition-all shadow-md shadow-amber-500/20"
           >
             Learn More About Us
           </Link>
@@ -45,13 +45,13 @@ export default function WhyChooseUs() {
           <div className="flex flex-col sm:flex-row gap-3 pt-2">
             <Link
               href="/register"
-              className="inline-flex px-5 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm transition-colors text-center"
+              className="inline-flex px-5 py-2 rounded-lg bg-emerald-400 hover:bg-emerald-300 text-black font-extrabold text-sm transition-all shadow-md shadow-emerald-500/20 text-center justify-center"
             >
               Register Now to Get Bonus
             </Link>
             <Link
               href="/deposit"
-              className="inline-flex px-5 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-600 text-white font-bold text-sm transition-colors text-center"
+              className="inline-flex px-5 py-2 rounded-lg bg-cyan-400 hover:bg-cyan-300 text-black font-extrabold text-sm transition-all shadow-md shadow-cyan-500/20 text-center justify-center"
             >
               Deposit & Get Extra Coins
             </Link>

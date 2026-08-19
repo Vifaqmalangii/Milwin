@@ -8,7 +8,7 @@ interface HowToPlayProps {
 
 export default function HowToPlay({ onOpenAuth }: HowToPlayProps) {
   return (
-    <section id="how-to-play" className="py-20 bg-[#0a0d14] relative overflow-hidden">
+    <section id="how-to-play" className="py-10 sm:py-12 lg:py-14 bg-[#0a0d14] relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="p-6 sm:p-10 rounded-2xl bg-[#0d121d] border border-amber-500/20 shadow-xl shadow-amber-500/5 space-y-6">
           {/* Heading */}
@@ -27,25 +27,25 @@ export default function HowToPlay({ onOpenAuth }: HowToPlayProps) {
           <div className="grid sm:grid-cols-2 gap-4 pt-4">
             <Link
               href="/download"
-              className="px-6 py-3 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-bold uppercase text-sm transition-colors text-center"
+              className="px-6 py-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-black font-extrabold uppercase text-sm transition-all shadow-md shadow-amber-500/20 text-center"
             >
               Download Milwin APK Now
             </Link>
             <Link
               href="/register"
-              className="px-6 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-bold uppercase text-sm transition-colors text-center"
+              className="px-6 py-3 rounded-lg bg-emerald-400 hover:bg-emerald-300 text-black font-extrabold uppercase text-sm transition-all shadow-md shadow-emerald-500/20 text-center"
             >
               Create Free Account
             </Link>
             <Link
               href="/blog"
-              className="px-6 py-3 rounded-lg bg-purple-500 hover:bg-purple-600 text-white font-bold uppercase text-sm transition-colors text-center"
+              className="px-6 py-3 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-extrabold uppercase text-sm transition-all shadow-md shadow-purple-600/20 text-center"
             >
               Read Game Guides
             </Link>
             <Link
               href="/contact"
-              className="px-6 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-600 text-white font-bold uppercase text-sm transition-colors text-center"
+              className="px-6 py-3 rounded-lg bg-cyan-400 hover:bg-cyan-300 text-black font-extrabold uppercase text-sm transition-all shadow-md shadow-cyan-500/20 text-center"
             >
               Contact Support
             </Link>

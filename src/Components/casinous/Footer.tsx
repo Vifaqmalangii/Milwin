@@ -1,25 +1,26 @@
 "use client";
 
 import Link from "next/link";
-import { FaDice, FaShieldAlt } from "react-icons/fa";
+import Image from "next/image";
+import { FaShieldAlt } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#07090e] border-t border-amber-500/20 text-slate-400 text-xs py-12 relative overflow-hidden">
+    <footer className="bg-[#07090e] border-t border-amber-500/20 text-slate-400 text-xs py-8 sm:py-10 lg:py-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 relative z-10">
         {/* Top Footer Wrapper */}
         <div className="flex flex-col sm:flex-row items-start justify-between gap-8 pb-8 border-b border-slate-800/80">
           {/* Logo & Description */}
           <div className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center text-black text-2xl shadow-lg shadow-amber-500/30">
-                <FaDice />
-              </div>
-              <span className="text-xl sm:text-2xl font-black tracking-wider uppercase text-white">
-                MIL<span className="text-amber-400">WIN</span>
-              </span>
+            <Link href="/" className="flex items-center group">
+              <Image
+                src="/milwinlogo.webp"
+                alt="Milwin Logo"
+                width={160}
+                height={48}
+                className="h-10 w-auto object-contain group-hover:scale-105 transition-transform"
+              />
             </Link>
-
           </div>
 
           {/* Navigation Links */}
@@ -68,7 +69,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="text-center text-slate-500 text-[11px]">
+        <div className="text-center text-slate-400 text-xs font-medium">
           Copyrights &copy; 2026 All Rights Reserved by{" "}
           <span className="text-amber-400 font-semibold">
             Milwin

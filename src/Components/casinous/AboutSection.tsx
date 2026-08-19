@@ -5,22 +5,22 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-[#0d121d] relative overflow-hidden">
+    <section id="about" className="py-10 sm:py-12 lg:py-14 bg-[#0d121d] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column Graphic */}
           <div className="relative flex justify-center order-2 lg:order-1">
             <div className="relative w-full max-w-lg aspect-square rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl shadow-amber-500/10">
               <Image
-                src="/top-game-images-1/About%20milwin.webp"
-                alt="Milwin Game cards gameplay - Pakistani online casino platform for earning real money through Teen Patti and card games"
+                src="/aboutmilwin.webp"
+                alt="About Milwin Game - Explore Our Elite VIP Experience"
                 width={1024}
                 height={1024}
                 sizes="(max-width: 1024px) 100vw, 560px"
-                quality={80}
+                quality={85}
                 className="h-full w-full object-cover hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0d121d] via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0d121d]/40 via-transparent to-transparent pointer-events-none"></div>
             </div>
           </div>
 
@@ -40,7 +40,7 @@ export default function AboutSection() {
 
             <Link
               href="/about"
-              className="inline-flex items-center px-8 py-3 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-bold uppercase text-sm transition-colors"
+              className="inline-flex items-center px-8 py-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-black font-extrabold uppercase text-sm transition-all shadow-md shadow-amber-500/20"
             >
               Learn More About Milwin →
             </Link>

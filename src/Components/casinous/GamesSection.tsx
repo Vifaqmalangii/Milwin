@@ -95,10 +95,10 @@ export default function GamesSection() {
       : gamesData.filter((g) => g.category === activeCategory);
 
   return (
-    <section id="games" className="py-20 bg-[#0a0d14] relative overflow-hidden">
+    <section id="games" className="py-10 sm:py-12 lg:py-14 bg-[#0a0d14] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* What is Milwin Game Section */}
-        <div className="max-w-4xl mx-auto mb-16 text-center space-y-4">
+        <div className="max-w-4xl mx-auto mb-10 sm:mb-12 text-center space-y-4">
           <h2 className="text-3xl sm:text-4xl font-black uppercase text-white tracking-wide">
             What is <span className="text-gold-gradient">Milwin Game</span> in Pakistan?
           </h2>
@@ -111,8 +111,8 @@ export default function GamesSection() {
         </div>
 
         {/* Game Screenshots Slideshow */}
-        <div className="max-w-5xl mx-auto mb-16">
-          <div className="text-center mb-8 space-y-2">
+        <div className="max-w-5xl mx-auto mb-10 sm:mb-12">
+          <div className="text-center mb-6 space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-amber-400">Inside the App</span>
             <h3 className="text-2xl sm:text-3xl font-black uppercase text-white tracking-wide">
               Game <span className="text-gold-gradient">Screenshots</span>
@@ -122,7 +122,7 @@ export default function GamesSection() {
         </div>
 
         {/* Key Features Container */}
-        <div className="max-w-5xl mx-auto mb-16 p-6 sm:p-8 rounded-2xl bg-[#0d121d] border border-amber-500/20 shadow-xl shadow-amber-500/5 space-y-8">
+        <div className="max-w-5xl mx-auto mb-10 sm:mb-12 p-6 sm:p-8 rounded-2xl bg-[#0d121d] border border-amber-500/20 shadow-xl shadow-amber-500/5 space-y-6 sm:space-y-8">
           <div className="text-center space-y-2">
             <h3 className="text-2xl sm:text-3xl font-black uppercase text-white tracking-wide">
               Key Features of <span className="text-gold-gradient">Milwin Game APK</span> Latest Version
@@ -292,16 +292,16 @@ export default function GamesSection() {
             Ready to Start <span className="text-gold-gradient">Playing?</span>
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <a href="/download" className="px-5 py-3 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-bold uppercase text-sm transition-colors text-center">
+            <a href="/download" className="px-5 py-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-black font-extrabold uppercase text-sm transition-all shadow-md shadow-amber-500/20 text-center">
               Download APK
             </a>
-            <a href="/register" className="px-5 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-bold uppercase text-sm transition-colors text-center">
+            <a href="/register" className="px-5 py-3 rounded-lg bg-emerald-400 hover:bg-emerald-300 text-black font-extrabold uppercase text-sm transition-all shadow-md shadow-emerald-500/20 text-center">
               Create Account
             </a>
-            <a href="/deposit" className="px-5 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-600 text-white font-bold uppercase text-sm transition-colors text-center">
+            <a href="/deposit" className="px-5 py-3 rounded-lg bg-cyan-400 hover:bg-cyan-300 text-black font-extrabold uppercase text-sm transition-all shadow-md shadow-cyan-500/20 text-center">
               Deposit Money
             </a>
-            <a href="/blog" className="px-5 py-3 rounded-lg bg-purple-500 hover:bg-purple-600 text-white font-bold uppercase text-sm transition-colors text-center">
+            <a href="/blog" className="px-5 py-3 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-extrabold uppercase text-sm transition-all shadow-md shadow-purple-600/20 text-center">
               Game Guides
             </a>
           </div>

@@ -1,17 +1,20 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import { FaDice, FaBars, FaTimes, FaAndroid, FaPlusCircle, FaWallet } from "react-icons/fa";
-import DownloadModal from "./DownloadModal";
-import DepositModal from "./DepositModal";
-import WithdrawModal from "./WithdrawModal";
+import Image from "next/image";
+import { FaBars, FaTimes } from "react-icons/fa";
+
+const DownloadModal = dynamic(() => import("./DownloadModal"), { ssr: false });
+const DepositModal = dynamic(() => import("./DepositModal"), { ssr: false });
+const WithdrawModal = dynamic(() => import("./WithdrawModal"), { ssr: false });
 
 interface NavbarProps {
-  onOpenAuth: (mode: "signin" | "signup") => void;
+  onOpenAuth?: (mode: "signin" | "signup") => void;
 }
 
-export default function Navbar({ onOpenAuth }: NavbarProps) {
+export default function Navbar({ onOpenAuth }: NavbarProps = {}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [downloadModalOpen, setDownloadModalOpen] = useState(false);
   const [depositModalOpen, setDepositModalOpen] = useState(false);
@@ -22,39 +25,65 @@ export default function Navbar({ onOpenAuth }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2 sm:gap-4">
 
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center text-black text-xl sm:text-2xl shadow-lg shadow-amber-500/30 group-hover:scale-105 transition-transform">
-            <FaDice />
-          </div>
-          <span className="text-xl sm:text-2xl font-black tracking-wider uppercase text-white">
-            MIL<span className="text-amber-400">WIN</span>
-          </span>
+        <Link href="/" className="flex items-center group shrink-0">
+          <Image
+            src="/milwinlogo.webp"
+            alt="Milwin Logo"
+            width={160}
+            height={48}
+            className="h-10 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation Links List */}
-        <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-xs xl:text-sm font-semibold tracking-wide text-slate-300 flex-wrap">
-          <Link href="/" className="hover:text-amber-400 transition-colors py-2">
+        <nav className="hidden lg:flex flex-1 items-center justify-evenly text-xs xl:text-sm font-semibold tracking-wide ml-4 xl:ml-8">
+          <Link
+            href="/"
+            className="px-3 py-1.5 rounded-lg text-slate-300 hover:text-amber-400 hover:bg-amber-500/10 hover:border hover:border-amber-500/30 border border-transparent transition-all duration-300 ease-in-out whitespace-nowrap shadow-sm hover:shadow-amber-500/10"
+          >
             Home
           </Link>
-          <Link href="/about" className="hover:text-amber-400 transition-colors py-2">
+          <Link
+            href="/about"
+            className="px-3 py-1.5 rounded-lg text-slate-300 hover:text-amber-400 hover:bg-amber-500/10 hover:border hover:border-amber-500/30 border border-transparent transition-all duration-300 ease-in-out whitespace-nowrap shadow-sm hover:shadow-amber-500/10"
+          >
             About Us
           </Link>
-          <Link href="/contact" className="hover:text-amber-400 transition-colors py-2">
+          <Link
+            href="/contact"
+            className="px-3 py-1.5 rounded-lg text-slate-300 hover:text-amber-400 hover:bg-amber-500/10 hover:border hover:border-amber-500/30 border border-transparent transition-all duration-300 ease-in-out whitespace-nowrap shadow-sm hover:shadow-amber-500/10"
+          >
             Contact Us
           </Link>
-          <Link href="/blog" className="hover:text-amber-400 transition-colors py-2">
+          <Link
+            href="/blog"
+            className="px-3 py-1.5 rounded-lg text-slate-300 hover:text-amber-400 hover:bg-amber-500/10 hover:border hover:border-amber-500/30 border border-transparent transition-all duration-300 ease-in-out whitespace-nowrap shadow-sm hover:shadow-amber-500/10"
+          >
             Blog
           </Link>
-          <Link href="/download" className="hover:text-amber-400 transition-colors py-2">
+          <Link
+            href="/download"
+            className="px-3 py-1.5 rounded-lg text-slate-300 hover:text-amber-400 hover:bg-amber-500/10 hover:border hover:border-amber-500/30 border border-transparent transition-all duration-300 ease-in-out whitespace-nowrap shadow-sm hover:shadow-amber-500/10"
+          >
             Download
           </Link>
-          <Link href="/deposit" className="text-emerald-400 hover:text-emerald-300 transition-colors py-2 font-bold">
+          <Link
+            href="/deposit"
+            className="px-3 py-1.5 rounded-lg text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10 hover:border hover:border-emerald-500/30 border border-transparent transition-all duration-300 ease-in-out font-bold whitespace-nowrap shadow-sm hover:shadow-emerald-500/10"
+          >
             Deposit
           </Link>
-          <Link href="/withdraw" className="text-cyan-400 hover:text-cyan-300 transition-colors py-2 font-bold">
+          <Link
+            href="/withdraw"
+            className="px-3 py-1.5 rounded-lg text-cyan-400 hover:text-cyan-300 hover:bg-cyan-500/10 hover:border hover:border-cyan-500/30 border border-transparent transition-all duration-300 ease-in-out font-bold whitespace-nowrap shadow-sm hover:shadow-cyan-500/10"
+          >
             Withdraw
           </Link>
-          <Link href="/register" className="hover:text-amber-400 transition-colors py-2">
+          <Link
+            href="/register"
+            className="px-3 py-1.5 rounded-lg text-slate-300 hover:text-amber-400 hover:bg-amber-500/10 hover:border hover:border-amber-500/30 border border-transparent transition-all duration-300 ease-in-out whitespace-nowrap shadow-sm hover:shadow-amber-500/10"
+          >
             Register
           </Link>
         </nav>
@@ -78,28 +107,28 @@ export default function Navbar({ onOpenAuth }: NavbarProps) {
       {mobileMenuOpen && (
         <div className="lg:hidden bg-[#131927] border-b border-amber-500/20 px-5 py-5 space-y-4 animate-fadeIn">
           <nav className="flex flex-col space-y-2 font-semibold text-slate-300 text-sm">
-            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="hover:text-amber-400 py-1">
+            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 rounded-lg hover:bg-amber-500/10 hover:text-amber-400 transition-all duration-200">
               Home
             </Link>
-            <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="hover:text-amber-400 py-1">
+            <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 rounded-lg hover:bg-amber-500/10 hover:text-amber-400 transition-all duration-200">
               About Us
             </Link>
-            <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-amber-400 py-1">
+            <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 rounded-lg hover:bg-amber-500/10 hover:text-amber-400 transition-all duration-200">
               Contact Us
             </Link>
-            <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="hover:text-amber-400 py-1">
+            <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 rounded-lg hover:bg-amber-500/10 hover:text-amber-400 transition-all duration-200">
               Blog
             </Link>
-            <Link href="/download" onClick={() => setMobileMenuOpen(false)} className="hover:text-amber-400 py-1">
+            <Link href="/download" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 rounded-lg hover:bg-amber-500/10 hover:text-amber-400 transition-all duration-200">
               Download
             </Link>
-            <Link href="/deposit" onClick={() => setMobileMenuOpen(false)} className="text-emerald-400 font-bold py-1">
+            <Link href="/deposit" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 rounded-lg text-emerald-400 hover:bg-emerald-500/10 font-bold transition-all duration-200">
               Deposit
             </Link>
-            <Link href="/withdraw" onClick={() => setMobileMenuOpen(false)} className="text-cyan-400 font-bold py-1">
+            <Link href="/withdraw" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 rounded-lg text-cyan-400 hover:bg-cyan-500/10 font-bold transition-all duration-200">
               Withdraw
             </Link>
-            <Link href="/register" onClick={() => setMobileMenuOpen(false)} className="hover:text-amber-400 py-1">
+            <Link href="/register" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 rounded-lg hover:bg-amber-500/10 hover:text-amber-400 transition-all duration-200">
               Register
             </Link>
           </nav>

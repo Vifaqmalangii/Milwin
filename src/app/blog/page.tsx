@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { usePathname } from "next/navigation";
+import Navbar from "@/Components/casinous/Navbar";
+import Footer from "@/Components/casinous/Footer";
 import Link from "next/link";
 import Image from "next/image";
-import { FaDice, FaCalendarAlt, FaUser, FaArrowRight, FaBlog, FaBars, FaTimes } from "react-icons/fa";
+import { FaCalendarAlt, FaUser, FaArrowRight, FaBlog } from "react-icons/fa";
 import Breadcrumb from "@/Components/Breadcrumb";
 
 interface BlogPost {
@@ -22,75 +22,10 @@ const blogPosts: BlogPost[] = [
 ];
 
 export default function BlogPage() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
-
   return (
     <main className="min-h-screen bg-[#0a0d14] text-white">
       {/* Navbar */}
-      <header className="sticky top-0 z-40 w-full bg-[#0a0d14]/90 backdrop-blur-lg border-b border-amber-500/20 shadow-xl">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center text-black text-2xl shadow-lg shadow-amber-500/30 group-hover:scale-105 transition-transform">
-              <FaDice />
-            </div>
-            <span className="text-2xl font-black tracking-wider uppercase text-white">
-              MIL<span className="text-amber-400">WIN</span>
-            </span>
-          </Link>
-          <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-xs xl:text-sm font-semibold tracking-wide text-slate-300 flex-wrap">
-            <Link href="/" className={pathname === "/" ? "text-amber-400 py-2" : "hover:text-amber-400 transition-colors py-2"}>Home</Link>
-            <Link href="/about" className={pathname === "/about" ? "text-amber-400 py-2" : "hover:text-amber-400 transition-colors py-2"}>About Us</Link>
-            <Link href="/contact" className={pathname === "/contact" ? "text-amber-400 py-2" : "hover:text-amber-400 transition-colors py-2"}>Contact Us</Link>
-            <Link href="/blog" className={pathname === "/blog" ? "text-amber-400 py-2" : "hover:text-amber-400 transition-colors py-2"}>Blog</Link>
-            <Link href="/download" className={pathname === "/download" ? "text-amber-400 py-2" : "hover:text-amber-400 transition-colors py-2"}>Download</Link>
-            <Link href="/deposit" className={pathname === "/deposit" ? "text-emerald-400 py-2" : "text-emerald-400 hover:text-emerald-300 transition-colors py-2 font-bold"}>Deposit</Link>
-            <Link href="/withdraw" className={pathname === "/withdraw" ? "text-cyan-400 py-2" : "text-cyan-400 hover:text-cyan-300 transition-colors py-2 font-bold"}>Withdraw</Link>
-            <Link href="/register" className={pathname === "/register" ? "text-amber-400 py-2" : "hover:text-amber-400 transition-colors py-2"}>Register</Link>
-          </nav>
-
-          {/* Mobile Toggle Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden text-xl text-slate-300 hover:text-amber-400 p-1.5"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <FaTimes /> : <FaBars />}
-          </button>
-        </div>
-
-        {/* Mobile Menu Drawer */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden bg-[#131927] border-b border-amber-500/20 px-5 py-5 space-y-4 animate-fadeIn">
-            <nav className="flex flex-col space-y-2 font-semibold text-slate-300 text-sm">
-              <Link href="/" onClick={() => setMobileMenuOpen(false)} className={pathname === "/" ? "text-amber-400 py-1" : "hover:text-amber-400 py-1"}>
-                Home
-              </Link>
-              <Link href="/about" onClick={() => setMobileMenuOpen(false)} className={pathname === "/about" ? "text-amber-400 py-1" : "hover:text-amber-400 py-1"}>
-                About Us
-              </Link>
-              <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className={pathname === "/contact" ? "text-amber-400 py-1" : "hover:text-amber-400 py-1"}>
-                Contact Us
-              </Link>
-              <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className={pathname === "/blog" ? "text-amber-400 py-1" : "hover:text-amber-400 py-1"}>
-                Blog
-              </Link>
-              <Link href="/download" onClick={() => setMobileMenuOpen(false)} className={pathname === "/download" ? "text-amber-400 py-1" : "hover:text-amber-400 py-1"}>
-                Download
-              </Link>
-              <Link href="/deposit" onClick={() => setMobileMenuOpen(false)} className={pathname === "/deposit" ? "text-emerald-400 font-bold py-1" : "text-emerald-400 font-bold py-1"}>
-                Deposit
-              </Link>
-              <Link href="/withdraw" onClick={() => setMobileMenuOpen(false)} className={pathname === "/withdraw" ? "text-cyan-400 font-bold py-1" : "text-cyan-400 font-bold py-1"}>
-                Withdraw
-              </Link>
-              <Link href="/register" onClick={() => setMobileMenuOpen(false)} className={pathname === "/register" ? "text-amber-400 py-1" : "hover:text-amber-400 py-1"}>
-                Register
-              </Link>
-            </nav>
-          </div>
-        )}
-      </header>
+      <Navbar />
 
       {/* Breadcrumb Navigation */}
       <Breadcrumb />
@@ -215,6 +150,9 @@ export default function BlogPage() {
           </Link>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </main>
   );
 }

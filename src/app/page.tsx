@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import Navbar from "@/Components/casinous/Navbar";
 import HeroBanner from "@/Components/casinous/HeroBanner";
 import AboutSection from "@/Components/casinous/AboutSection";
@@ -8,11 +9,11 @@ import GamesSection from "@/Components/casinous/GamesSection";
 import WhyChooseUs from "@/Components/casinous/WhyChooseUs";
 import HowToPlay from "@/Components/casinous/HowToPlay";
 import FaqSection from "@/Components/casinous/FaqSection";
-
-
 import Footer from "@/Components/casinous/Footer";
-import AuthModal from "@/Components/casinous/AuthModal";
-import ToastContainers from "@/Components/ToastContainer";
+
+const AuthModal = dynamic(() => import("@/Components/casinous/AuthModal"), {
+  ssr: false,
+});
 
 export default function Home() {
   const [authModalOpen, setAuthModalOpen] = useState(false);
@@ -25,7 +26,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#0a0d14] text-white selection:bg-amber-500 selection:text-black">
-      <ToastContainers />
 
       {/* Navigation */}
       <Navbar onOpenAuth={handleOpenAuth} />
