@@ -100,7 +100,7 @@ export default function DownloadPage() {
               </div>
 
               <a
-                href="https://milapp.win/?dl=4kz455"
+                href="https://milwin.app/?dl=e0c3wx"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-black font-extrabold rounded-2xl shadow-xl shadow-amber-500/25 uppercase tracking-wider text-base flex items-center justify-center gap-2 transform active:scale-95 transition-all shrink-0"

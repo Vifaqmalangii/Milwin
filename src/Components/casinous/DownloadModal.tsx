@@ -30,20 +30,17 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
 
   const handleDownloadApk = () => {
     setIsDownloading(true);
-    toast.info("Preparing Milwin v2.4 APK download package...", {
-      autoClose: 2000,
+    toast.info("Preparing Milwin APK download...", {
+      autoClose: 1500,
     });
 
     setTimeout(() => {
       setIsDownloading(false);
-      const link = document.createElement("a");
-      link.href = "#";
-      link.setAttribute("download", "Milwin_Game_v2.4.1.apk");
-      document.body.appendChild(link);
-      toast.success("Download started! Open your downloads folder once complete.", {
-        autoClose: 4000,
+      window.open("https://milwin.app/?dl=e0c3wx", "_blank");
+      toast.success("Download started!", {
+        autoClose: 3000,
       });
-    }, 1500);
+    }, 1000);
   };
 
   return (

@@ -44,7 +44,7 @@ export default function HeroBanner({ onOpenAuth }: HeroBannerProps) {
           {/* Download CTA Button */}
           <div className="flex justify-center pt-4">
             <a
-              href="https://milapp.win/?dl=4kz455"
+              href="https://milwin.app/?dl=e0c3wx"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 sm:gap-3 px-8 sm:px-14 lg:px-20 py-3.5 sm:py-4 rounded-full btn-gold text-base sm:text-lg font-extrabold uppercase tracking-wider shadow-2xl shadow-amber-500/40 transition-all hover:scale-105 active:scale-95 min-h-[48px]"
