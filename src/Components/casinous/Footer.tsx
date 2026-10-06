@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { FaShieldAlt } from "react-icons/fa";
@@ -18,6 +16,7 @@ export default function Footer() {
                 alt="Milwin Logo"
                 width={160}
                 height={48}
+                loading="lazy"
                 className="h-10 w-auto object-contain group-hover:scale-105 transition-transform"
               />
             </Link>

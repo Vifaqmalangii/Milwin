@@ -62,7 +62,8 @@ export default function GameSlideshow() {
           width={360}
           height={640}
           sizes="(max-width: 640px) 100vw, 360px"
-          quality={80}
+          quality={65}
+          loading="lazy"
           className={`h-full w-full object-contain bg-white transition-all duration-300 ${animating
               ? direction === "right"
                 ? "opacity-0 translate-x-4"
@@ -139,7 +140,8 @@ export default function GameSlideshow() {
               width={80}
               height={56}
               sizes="80px"
-              quality={70}
+              quality={60}
+              loading="lazy"
               className="h-full w-full object-contain bg-white"
             />
           </button>

@@ -1,13 +1,11 @@
-"use client";
-
 import Image from "next/image";
 import { FaArrowDown } from "react-icons/fa";
 
 interface HeroBannerProps {
-  onOpenAuth: (mode: "signin" | "signup") => void;
+  onOpenAuth?: (mode: "signin" | "signup") => void;
 }
 
-export default function HeroBanner({ onOpenAuth }: HeroBannerProps) {
+export default function HeroBanner({ onOpenAuth }: HeroBannerProps = {}) {
   return (
     <section id="home" className="relative flex items-center justify-center py-10 sm:py-12 lg:py-16 overflow-hidden">
       {/* Background Image with Dark Gradient Overlays */}

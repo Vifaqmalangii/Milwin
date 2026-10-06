@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 
@@ -14,10 +12,11 @@ export default function AboutSection() {
               <Image
                 src="/aboutmilwin.webp"
                 alt="About Milwin Game - Explore Our Elite VIP Experience"
-                width={1024}
-                height={1024}
-                sizes="(max-width: 1024px) 100vw, 560px"
-                quality={85}
+                width={800}
+                height={800}
+                sizes="(max-width: 1024px) 100vw, 500px"
+                quality={75}
+                loading="lazy"
                 className="h-full w-full object-cover hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0d121d]/40 via-transparent to-transparent pointer-events-none"></div>
